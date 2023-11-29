@@ -1,0 +1,37 @@
+import javax.swing.JOptionPane;
+
+
+public class CircleCalculator {
+public static void main(String[] args){
+			String[] options = new String[] {"Area", "Circumfrence", "Diameter", "Chord"};
+			String RadiuS = JOptionPane.showInputDialog(null,"Radius of circle: ",0);
+
+			double Radius = Double.parseDouble(RadiuS);
+			int n = 
+    		JOptionPane.showOptionDialog(null,
+    		"Choose a mesurement",
+    		"Circle calculator",
+    		JOptionPane.DEFAULT_OPTION,
+    		JOptionPane.PLAIN_MESSAGE,
+    		null,
+    		options,
+    		options[0]);
+			double chord = Radius * Radius + Radius * Radius; 
+			//Anything put here will run before JOptionpane
+			
+    	if (n == 0) { 
+    		
+    		JOptionPane.showMessageDialog(null, "Area: " + Radius * Radius * 3.14159, "Calculator", JOptionPane.PLAIN_MESSAGE);
+    		
+    		} else if (n == 1) { 
+    			JOptionPane.showMessageDialog(null, "Circumfrence: " + (Radius * 2 * 3.14159), "Calculator", JOptionPane.PLAIN_MESSAGE);// This is the script that shows the results 	
+    		} else if (n == 2) { 
+    			JOptionPane.showMessageDialog(null, "Diameter: " + Radius * 2, "Calculator", JOptionPane.PLAIN_MESSAGE);
+    		} else if (n == 3) { 
+    			JOptionPane.showMessageDialog(null, "Chord: " + chord, "Calculator", JOptionPane.PLAIN_MESSAGE);
+    		
+    		
+    	}
+    
+	}
+}
